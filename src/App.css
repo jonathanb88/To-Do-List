@@ -1,38 +1,126 @@
+:root{
+  --gris-suave: #fcfaf8;
+  --gris: #353434;
+  --rojo-suave: #ffaaa1;
+  --rojo: #dc4c3e;
+  --negro: #1f1e1e;
+  --blanco: white;
+  --verde:rgb(0, 230, 122);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1{
+  margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper-todo{
+  background-color: var(--gris);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 3rem 35%;
+  padding: 0 3rem;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper-todo h2{
+  background-color: var(--gris);
+  margin: 1rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-todo{
+  background-color: var(--gris);
+}
+
+.form-todo input[type="text"]{
+  background-color: var(--blanco);
+  border-radius: 5px 0 0 5px;
+  margin-bottom: 2rem;
+  padding: 7px;
+  color: var(--negro);
+}
+
+.form-todo input:focus{
+  outline: 2px solid var(--verde);
+}
+
+.btn-todo{
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--blanco);
+  background-color: var(--verde);
+  /* border-radius: 5px; */
+}
+
+.show-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris-suave);
+  color: var(--gris);
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: solid 1px var(--negro);
+  width: 75%;
+  cursor: pointer;
+}
+
+.show-todo p{
+  color: var(--negro);
+  background-color: var(--blanco);
+  font-size: large;
+  font-weight: 600;
+}
+
+.show-todo div{
+  display: flex;
+  gap: 10px;
+  color: var(--negro);
+  background-color: var(--blanco);
+  font-size: large;
+  font-weight: 600;
+}
+
+.show-todo div img{
+  /* color: var(--blancio); */
+  height: 30px;
+  background-color: var(--blanco);
+}
+
+.task-completed{
+  text-decoration: line-through;
+  color: var(--rojo);
+}
+
+.edit-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris-suave);
+  color: var(--gris);
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border: solid 1px var(--negro);
+  width: 75%;
+  cursor: pointer;
+}
+
+.edit-todo input[type="text"]{
+  background-color: var(--gris);
 }
